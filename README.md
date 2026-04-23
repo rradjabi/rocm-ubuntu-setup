@@ -99,8 +99,12 @@ Expected result (content includes):
 - MIOpen runtime version
 
 The environment setup is complete, and the system is ready for use with PyTorch to work with machine learning models and algorithms.
+### Deactivate venv
+```
+deactivate
+```
 
-## Workshop3 - desktop-robot prerequisites
+## Workshop3 - desktop-robot dependencies
 ### Ubuntu packages
 ```
 sudo apt update
@@ -134,8 +138,12 @@ pip install -r requirements.txt
 
 pip install "reachy-mini[mujoco]"
 ```
+### Deactivate venv
+```
+deactivate
+```
 
-## Workshop4 - openclaw-ai-agent prerequisites
+## Workshop4 - openclaw-ai-agent dependencies
 ### Install Lemonade via PPA
 ```
 sudo apt-get install -y software-properties-common
@@ -145,6 +153,7 @@ sudo apt-get install -y lemonade-server
 ```
 ### Configure Lemonade Model Context Size
 ```
+lemonade pull Qwen3.5-9B-GGUF
 lemonade config set ctx_size=32768
 ```
 ### Install OpenClaw
@@ -154,4 +163,11 @@ export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"
 openclaw --version
 echo 'export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"' >> ~/.bashrc
 ```
+
+## Workshop8 - agentic-game dependencies
+### Install OpenCode
+```
+curl -fsSL https://opencode.ai/install | bash
+```
+### 
 
