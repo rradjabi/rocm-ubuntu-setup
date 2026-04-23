@@ -1,5 +1,13 @@
 # rocm-ubuntu-setup
 
+## Cleanup the state of the HP Linux Image
+```
+sudo apt-get install -f
+sudo apt remove linux-headers-6.18.20-061820-generic
+sudo apt autoremove
+sudo apt-get install -f
+```
+
 ## Install basic dependencies
 ```
 sudo apt update
@@ -125,5 +133,25 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 pip install "reachy-mini[mujoco]"
+```
+
+## Workshop4 - openclaw-ai-agent prerequisites
+### Install Lemonade via PPA
+```
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:lemonade-team/bleeding-edge
+sudo apt-get update
+sudo apt-get install -y lemonade-server
+```
+### Configure Lemonade Model Context Size
+```
+lemonade config set ctx_size=32768
+```
+### Install OpenClaw
+```
+curl -fsSL https://openclaw.ai/install.sh | bash -s -- --no-prompt --no-onboard
+export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"
+openclaw --version
+echo 'export PATH="$HOME/.npm-global/bin:$HOME/.local/bin:$PATH"' >> ~/.bashrc
 ```
 
