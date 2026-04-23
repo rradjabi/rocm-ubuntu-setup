@@ -6,7 +6,7 @@ sudo apt update
 sudo apt install -y build-essential dkms linux-headers-$(uname -r)
 ```
 
-## ROCm instal
+## ROCm install
 ```
 sudo apt update
 wget -q https://repo.radeon.com/amdgpu-install/7.2/ubuntu/noble/amdgpu-install_7.2.70200-1_all.deb -O /tmp/amdgpu-install_7.2.70200-1_all.deb
