@@ -1,13 +1,5 @@
 # rocm-ubuntu-setup
 
-## Cleanup the state of the HP Linux Image
-```
-sudo apt-get install -f
-sudo apt remove linux-headers-6.18.20-061820-generic
-sudo apt autoremove
-sudo apt-get install -f
-```
-
 ## Install basic dependencies
 ```
 sudo apt update
